@@ -1,0 +1,28 @@
+<ul class="gallery">
+ {{#each this}}
+  <li class="gallery__item ">
+    <div class="photo-card">
+      <img class="gallery__image" src="{{this.webformatURL}}" data-source="{{largeImageURL}}" alt="{{tags}}" />
+    
+      <div class="stats">
+        <p class="stats-item">
+          <i class="material-icons">thumb_up</i>
+          {{this.likes}}
+        </p>
+        <p class="stats-item">
+          <i class="material-icons">visibility</i>
+          {{this.views}}
+        </p>
+        <p class="stats-item">
+          <i class="material-icons">comment</i>
+          {{this.comments}}
+        </p>
+        <p class="stats-item">
+          <i class="material-icons">cloud_download</i>
+          {{this.downloads}}
+        </p>
+      </div>
+    </div>
+  </li>
+ {{/each}}
+</ul>
